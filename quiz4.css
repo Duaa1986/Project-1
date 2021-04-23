@@ -1,37 +1,30 @@
-body, html {
-
+body {
     height: 100%;
-    
+    color: floralwhite;
 }
-
 h1 {
     color: floralwhite;
     padding: 20px;
     text-align: center;
     font-size: xx-large;
     font-family: cursive;
-    
 }
+p {
+    color: floralwhite;
+    text-align: center;
+    line-height: 3.8;
+    font-size: x-large;
+    font-family:cursive ;
+    
+  }
 
-
-
-.hero-image {
- 
-    background-image: url("./q2.jpg");
+  .hero-image {
+ color: floralwhite;
+    background-image: url("./q1.jpg");
     height:100% ;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-  }
-  
-  
-  p {
-    color: floralwhite;
-    text-align: center;
-    line-height: 3.8;
-    font-size: xx-large;
-    font-family:cursive ;
-    
   }
   button {
     border-radius: 100%;
