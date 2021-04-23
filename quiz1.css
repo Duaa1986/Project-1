@@ -1,40 +1,68 @@
 body {
-    height: 100%;
-    color: floralwhite;
-}
-h1 {
-    color: floralwhite;
-    padding: 20px;
-    text-align: center;
-    font-size: xx-large;
-    font-family: cursive;
-}
-p {
-    color: floralwhite;
-    text-align: center;
-    line-height: 3.8;
-    font-size: x-large;
-    font-family:cursive ;
-    
-  }
 
-  .hero-image {
- color: floralwhite;
+    display: grid;
+    height: 100%;
     background-image: url("./q1.jpg");
-    height:100% ;
-    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-  }
-  button {
-    border-radius: 100%;
-    padding: 20px;
     text-align: center;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-  }
-  a:hover {
-    background-color: rgba(21, 128, 101, 0.753);
-  }
+    background-position: center;
+}
+.home_page {
+ 
+  height:100% ;
+  align-items: center;
+  align-content: center;
+  color: floralwhite;
+  font-size: xx-large;
+  font-family: cursive;
+   }
+.header {
+  height:100% ;
+  align-items: center;
+  align-content: center;
+  color: floralwhite;
+  font-size: xx-large;
+  font-family: cursive;
+}
+.quiz {
+  color: floralwhite;
+  text-align: center;
+  line-height: 3.8;
+  font-size: x-large;
+  font-family:cursive ;
+  display: grid;
+  justify-content: center;
+}
+#counter{
+  height:100% ;
+  align-items: center;
+  align-content: center;
+  color: floralwhite;
+  font-size: xx-large;
+  font-family: cursive;
+  align-self: start;
+  
+
+}
+#next {
+  border-radius: 100%;
+  padding: 20px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+a:hover {
+  background-color: blue;
+}
+#َresult {
+  border-radius: 100%;
+  padding: 20px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
