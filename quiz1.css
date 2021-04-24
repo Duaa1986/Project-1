@@ -1,4 +1,4 @@
-body {
+body , html {
 
     display: grid;
     height: 100%;
@@ -7,16 +7,10 @@ body {
     background-size: cover;
     text-align: center;
     background-position: center;
+    color: rgb(121, 8, 8);
+    font-size: 50px;
 }
-#home_page {
- 
-  height:100% ;
-  align-items: center;
-  align-content: center;
-  color: floralwhite;
-  font-size: xx-large;
-  font-family: cursive;
-   }
+
 .header {
   height:100% ;
   align-items: center;
@@ -25,16 +19,8 @@ body {
   font-size: xx-large;
   font-family: cursive;
 }
-.quiz {
-  color: floralwhite;
-  text-align: center;
-  line-height: 3.8;
-  font-size: x-large;
-  font-family:cursive ;
-  display: grid;
-  justify-content: center;
-}
-#answer {
+
+#quiz {
   color: floralwhite;
   text-align: center;
   line-height: 3.8;
@@ -58,11 +44,13 @@ body {
   border-radius: 100%;
   padding: 20px;
   text-align: center;
-  display: inline-block;
+  display: inline;
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
 }
+#next:hover{
+	background-color: rgb(228, 111, 111);}
 
 
 #َresult {
@@ -70,11 +58,20 @@ body {
   padding: 20px;
   text-align: center;
   display: inline;
-  font-size: 16px;
-  margin: 4px 2px;
+  font-size: xx-large;
   cursor: pointer;
+  color: floralwhite;
+  transform: translateX(-50) translateY(-50);
 }
-#start {
+
+
+.again {
+  display: none;
+}
+
+
+
+#quit {
   border-radius: 100%;
   padding: 20px;
   text-align: center;
@@ -83,7 +80,10 @@ body {
   margin: 4px 2px;
   cursor: pointer;
 }
-#exit {
+  #quit:hover{
+		background-color: rgb(228, 111, 111);}
+
+  #back {
   border-radius: 100%;
   padding: 20px;
   text-align: center;
@@ -91,4 +91,18 @@ body {
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
-}
+
+    }
+    #back:hover{
+      background-color: rgb(228, 111, 111);}
+
+    @media all and (max-width: 800px) {
+      .header {
+      
+        grid-template-columns:auto;
+        justify-content: center;
+      }
+      .quiz {
+        height: 150px; }
+  
+    }

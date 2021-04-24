@@ -8,36 +8,31 @@
     <title>Quiz Game</title>
 </head>
 <body>
-     <!--Start page-->
-    <div class = main id="home_page">
-      
-         <h1>Start To Fun Quiz</h1>
-         <button id="start" onclick="start();">Start Quiz!</button>
-    </div>
-
+    
     <div class="header">
         <h1>* Questions *</h1>
-            
-    </div>
-    <div class="quiz" id="quiz">
-        <div id="question">
-        </div>
-        <div id="answer">
         
-            <label class="option"><input type="radio" name="option" value="A" /><span id="optionA"></span></label>
-            <label class="option"><input type="radio" name="option" value="B" /><span id="optionB"></span></label>
-            <label class="option"><input type="radio" name="option" value="C" /><span id="optionC"></span></label>
-            <label class="option"><input type="radio" name="option" value="D" /><span id="optionD"></span></label>
-            
-        </div>
-         <div>
-             <button id="next" onclick="nextques();">Next</button>
-             <button id="exit" onclick="exit();">submit</button>
-        </div>
-    <footer>
-        <p id="counter">Question x of y</p>
-    </footer>
+    </div>
+    
 
+        </div>
+        <div id="quiz">
+            <div class="qCount"></div>
+            <div id="question"></div>
+            <label class="option1"><input class="option11" type="radio" name="option" value="" /><span id="option1"></span></label>
+            <label class="option2"><input class="option22" type="radio" name="option" value="" /><span id="option2"></span></label>
+            <label class="option3"><input class="option33" type="radio" name="option" value="" /><span id="option3"></span></label>
+            <label class="option4"><input class="option44" type="radio" name="option" value="" /><span id="option4"></span></label>
+            <button id="next" onclick="nextques();">Next</button>
+            <button id=back ><a href="homepage.html"> Back </a> </button>
+            <button id="quit" onclick="quit();">Quit</button>
+       
+        </div>
+        <div id="result" >
+        </div>
+        <button class="again">Play Again</button>
+       
+        
     <script src="quiz.js"></script>
         
         

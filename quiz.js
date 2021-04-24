@@ -1,64 +1,110 @@
-let q1 = "How many days makes a week ?"
-let q2 = "How manay hours can be found in a day ?"
-let q3 = "How many permanent teeth does a dog have ?"
-let q4 = "How many sides does an hexagon have ?"
-let q5 = "How many hearts does an Octopus have ?"
 
-const arrayQ = [{
-    q1: "How many days makes a week ?",
-    A: "10 days",
-    B: "14 days",
-    C: "5 days",
-    D: "7 days",
-    correctOption: "D"
-},
-{
-    q2: "How manay hours can be found in a day ?",
-    A: "30 hours",
-    B: "38 hours",
-    C: "48 hours",
-    D: "24 hours",
-    correctOption: "D"
-},
-
-    {
-        q3: "How many permanent teeth does a dog have ?",
-        A: "38",
-        B: "42",
-        C: "40",
-        D: "36",
-        correctOption: "B"
-    },
-    {
-        q4: "How many sides does an hexagon have ?",
-        A: "Six",
-        B: "Sevene",
-        C: "Four",
-        D: "Five",
-        correctOption: "A"
-    },
-    
-    {
-        q5: "How many hearts does an Octopus have ?",
-        A: "One",
-        B: "Two",
-        C: "Three",
-        D: "Four",
-        correctOption: "C"
-    },
-
+const questions = [
+["How many days makes a week ?","10 days","14 days","5 days","7 days", 4],
+ ["How manay hours can be found in a day ?","30 hours", "38 hours","48 hours", "24 hours",
+ 4],
+ [ "How many permanent teeth does a dog have ?","38","42","40","36",4],
+ ["How many sides does an hexagon have ?","Six","Sevene","Four","Five",1],
+["How many hearts does an Octopus have ?","One","Two","Three","Four",3]
 ]
-   
 
-let questionCount = 0;
 
-const showQuestion = () => {
-   const questionlist = arrayQ[questionCount]
-   question.innerHTML = arrayQ.question
-   question.innerHTML = questionlist.question
-   optionA.innerHTML =questionlist.A;
-   optionB.innerHTML =questionlist.B;
-   optionC.innerHTML =questionlist.C;
-   optionD.innerHTML =questionlist.D;
+const quiz=document.getElementById("quiz");
+let ques= document.getElementById("question");
+let opt1=document.getElementById("option1");
+let opt2=document.getElementById("option2");
+let opt3=document.getElementById("option3");
+let opt4=document.getElementById("option4");
+
+
+let radioOpt1=document.querySelector(".option11");
+let radioOpt2=document.querySelector(".option22");
+let radioOpt3=document.querySelector(".option33");
+let radioOpt4=document.querySelector(".option44");
+
+
+const again = document.querySelector(".again")
+const qCount = document.querySelector('.qCount')
+
+let res=document.getElementById("result");
+const nextbutton= document.getElementById("next");
+const q=document.getElementById('quit');
+
+let tques=questions.length;
+let score=0;
+let quesindex=0;
+let avg; 
+let count = 1;
+
+
+
+
+showQuesion = (quesindex) =>
+{
+	ques.textContent=quesindex+1+". "+questions[quesindex][0];
+	opt1.textContent=questions[quesindex][1];
+	opt2.textContent=questions[quesindex][2];
+	opt3.textContent=questions[quesindex][3];
+	opt4.textContent=questions[quesindex][4];
+
+	radioOpt1.value=questions[quesindex][1];
+	radioOpt2.value=questions[quesindex][2];
+	radioOpt3.value=questions[quesindex][3];
+	radioOpt4.value=questions[quesindex][4];
+	
+	
+	qCount.textContent = count
+	
+	 return; 
+};
+showQuesion(0);
+ nextques = () =>
+{
+	let selected_ans= document.querySelector('input[type=radio]:checked');
+	
+	count++;
+	qCount.textContent = count;
+
+	if(!selected_ans)
+		{alert("SELECT AN OPTION");return;}
+
+	
+		if(questions[quesindex].indexOf(selected_ans.value) === questions[quesindex][5])
+		{score++;}
+	selected_ans.checked=false;
+	     quesindex++;
+	     if(quesindex===tques-1)
+	     	nextbutton.textContent="Finish";
+	     avg =score/tques;
+	     if(quesindex===tques)
+	     {
+	     q.style.display='none';
+          quiz.style.display='none';
+		  
+          result.style.display='block';
+		  again.style.display='block';
+		
+		  result.textContent="SCORED:"+(avg*100).toFixed(2)+"%";
+            return;
+	     }
+         showQuesion(quesindex);
+
 }
-showQuestion();
+
+
+again.addEventListener('click', () => {
+	window.location.assign('./quiz1.html')
+})
+
+
+
+quit =() =>
+{         
+	      quiz.style.display='none';
+          result.style.display='';
+		  again.style.display='block';
+          let avg =score/tques;
+          result.textContent="SCORE ="+avg*100;
+          q.style.display="none";
+		 
+}
