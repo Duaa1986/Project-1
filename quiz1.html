@@ -8,33 +8,37 @@
     <title>Quiz Game</title>
 </head>
 <body>
-    <div class="home_page">
-        <div id="game" >
-          
-             <h1>Start To Fun Quiz</h1>
+     <!--Start page-->
+    <div class = main id="home_page">
+      
+         <h1>Start To Fun Quiz</h1>
+         <button id="start" onclick="start();">Start Quiz!</button>
+    </div>
 
-          </div>
-      </div>
-        <div class="header">
-            <h1>* Questions *</h1>
+    <div class="header">
+        <h1>* Questions *</h1>
+            
+    </div>
+    <div class="quiz" id="quiz">
+        <div id="question">
+        </div>
+        <div id="answer">
+        
+            <label class="option"><input type="radio" name="option" value="A" /><span id="optionA"></span></label>
+            <label class="option"><input type="radio" name="option" value="B" /><span id="optionB"></span></label>
+            <label class="option"><input type="radio" name="option" value="C" /><span id="optionC"></span></label>
+            <label class="option"><input type="radio" name="option" value="D" /><span id="optionD"></span></label>
             
         </div>
-                <div class="quiz"id="question">
-                   
-                    <p ><input type="radio" name="question" value="A" />A</p>
-                    <p ><input type="radio" name="question" value="B" />B</p>
-                    <p ><input type="radio" name="question" value="C" />C</p>
-                    <p ><input type="radio" name="question" value="D" />D</p>
-                    <button id="Next">Next Question</button>
-                </div>
-                <div>
-                <button id="result" >Scour</button>
-                </div>
-                <footer>
-                    <p id="counter">Question x of y</p>
-                </footer>
-                
-                <script  src="quiz.js"></script>
+         <div>
+             <button id="next" onclick="nextques();">Next</button>
+             <button id="exit" onclick="exit();">submit</button>
+        </div>
+    <footer>
+        <p id="counter">Question x of y</p>
+    </footer>
+
+    <script src="quiz.js"></script>
         
         
         

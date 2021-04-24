@@ -8,7 +8,7 @@ body {
     text-align: center;
     background-position: center;
 }
-.home_page {
+#home_page {
  
   height:100% ;
   align-items: center;
@@ -26,6 +26,15 @@ body {
   font-family: cursive;
 }
 .quiz {
+  color: floralwhite;
+  text-align: center;
+  line-height: 3.8;
+  font-size: x-large;
+  font-family:cursive ;
+  display: grid;
+  justify-content: center;
+}
+#answer {
   color: floralwhite;
   text-align: center;
   line-height: 3.8;
@@ -54,14 +63,31 @@ body {
   margin: 4px 2px;
   cursor: pointer;
 }
-a:hover {
-  background-color: blue;
-}
+
+
 #َresult {
   border-radius: 100%;
   padding: 20px;
   text-align: center;
-  display: inline-block;
+  display: inline;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+#start {
+  border-radius: 100%;
+  padding: 20px;
+  text-align: center;
+  display: inline;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+#exit {
+  border-radius: 100%;
+  padding: 20px;
+  text-align: center;
+  display: inline;
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
