@@ -1,42 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="quiz1.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="quiz1.css" />
     <title>Quiz Game</title>
-</head>
-<body>
-    
+  </head>
+  <body>
     <div class="header">
-        <h1>* Questions *</h1>
-        
+      <h1>* Questions *</h1>
     </div>
-     <div class="qCount"></div>
-   
-        <div id="quiz">
-            <div id="question"></div>
-            <label class="option1"><input class="option11" type="radio" name="option" value="" /><span id="option1"></span></label>
-            <label class="option2"><input class="option22" type="radio" name="option" value="" /><span id="option2"></span></label>
-            <label class="option3"><input class="option33" type="radio" name="option" value="" /><span id="option3"></span></label>
-            <label class="option4"><input class="option44" type="radio" name="option" value="" /><span id="option4"></span></label>
-            <div>
-            <button id=back ><a href="homepage.html"> Back </a> </button>
-            <button id="next" onclick="nextques();">Next</button>
-            <button id="quit" onclick="quit();">Quit</button>
-            </div>
-        </div>
-        <div id="result" >
-        </div>
-    <footer id=again>
-        <button class="again">Play Again</button>
+    <div class="qCount"></div>
+
+    <div id="quiz">
+      <div id="question"></div>
+      <label class="option1"
+        ><input class="option11" type="radio" name="option" value="" /><span
+          id="option1"
+        ></span
+      ></label>
+      <label class="option2"
+        ><input class="option22" type="radio" name="option" value="" /><span
+          id="option2"
+        ></span
+      ></label>
+      <label class="option3"
+        ><input class="option33" type="radio" name="option" value="" /><span
+          id="option3"
+        ></span
+      ></label>
+      <label class="option4"
+        ><input class="option44" type="radio" name="option" value="" /><span
+          id="option4"
+        ></span
+      ></label>
+      <div>
+        <button id="back"><a href="homepage.html"> Back </a></button>
+        <button id="next" onclick="nextques();">Next</button>
+        <button id="quit" onclick="quit();">Quit</button>
+      </div>
+    </div>
+    <div id="result"></div>
+    <footer id="again">
+      <button class="again">Play Again</button>
     </footer>
-        
+
     <script src="quiz.js"></script>
-        
-        
-        
-    
-</body>
+  </body>
 </html>

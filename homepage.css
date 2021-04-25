@@ -1,68 +1,61 @@
+body,
+html {
+  display: grid;
+  height: 100%;
+  background-image: url("./q6.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  background-position: center;
+  font-size: 80px;
+  color: black;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
 
- body , html {
-
-    display: grid;
-    height: 100%;
-    background-image: url("./q6.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    text-align: center;
-    background-position: center;
-    font-size: 80px;
-    color: black;
-    text-align: center;
-    -webkit-animation: glow 1s ease-in-out infinite alternate;
-    -moz-animation: glow 1s ease-in-out infinite alternate;
-     animation: glow 1s ease-in-out infinite alternate;
-  
-    }
-    
-    @-webkit-keyframes glow {
-      from {
-        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #630505, 0 0 40px #630505, 0 0 50px #630505, 0 0 60px #630505, 0 0 70px #630505;
-      }
-      to {
-        text-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #630505, 0 0 50px #630505, 0 0 60px #630505, 0 0 70px #630505, 0 0 80px #630505;
-      }
-    }
-
-
-
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #630505,
+      0 0 40px #630505, 0 0 50px #630505, 0 0 60px #630505, 0 0 70px #630505;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #630505,
+      0 0 50px #630505, 0 0 60px #630505, 0 0 70px #630505, 0 0 80px #630505;
+  }
+}
 
 .home_page {
- 
- height:100% ;
- align-items: center;
- align-content: center;
- font-size: xx-large;
- font-family: cursive;
+  height: 100%;
+  align-items: center;
+  align-content: center;
+  font-size: xx-large;
+  font-family: cursive;
+}
+
+@media all and (max-width: 800px) {
+  .header {
+    grid-template-columns: auto;
+    justify-content: center;
   }
- 
-    @media all and (max-width: 800px) {
-      .header {
-      
-        grid-template-columns:auto;
-        justify-content: center;
-      }
-      .quiz {
-        height: 150px; }
-  
-    }
-    #stbtn {
-      height: 70px;
-      width: 250px;
-      text-align: center;
-      padding: 20px 0;
-      background: grey;
-      font-size: 23px;
-      font-weight: 700;
-      border-radius: 30px 10px;
-      border:solid black;
-      cursor: pointer;}
+  .quiz {
+    height: 150px;
+  }
+}
+#stbtn {
+  height: 70px;
+  width: 250px;
+  text-align: center;
+  padding: 20px 0;
+  background: grey;
+  font-size: 23px;
+  font-weight: 700;
+  border-radius: 30px 10px;
+  border: solid black;
+  cursor: pointer;
+}
 
-      #stbtn:hover{
-      background-color: rgb(88, 85, 85)}
-
-   
-       
- 
+#stbtn:hover {
+  background-color: rgb(88, 85, 85);
+}
