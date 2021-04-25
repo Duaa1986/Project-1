@@ -1,7 +1,7 @@
 
 const questions = [
 ["How many days makes a week ?","10 days","14 days","5 days","7 days", 4],
- ["How manay hours can be found in a day ?","30 hours", "38 hours","48 hours", "24 hours",
+ ["How many hours can be found in a day ?","30 hours", "38 hours","48 hours", "24 hours",
  4],
  [ "How many permanent teeth does a dog have ?","38","42","40","36",4],
  ["How many sides does an hexagon have ?","Six","Sevene","Four","Five",1],
@@ -41,7 +41,7 @@ let count = 1;
 
 showQuesion = (quesindex) =>
 {
-	ques.textContent=quesindex+1+". "+questions[quesindex][0];
+	ques.textContent=questions[quesindex][0];
 	opt1.textContent=questions[quesindex][1];
 	opt2.textContent=questions[quesindex][2];
 	opt3.textContent=questions[quesindex][3];
@@ -80,6 +80,10 @@ showQuesion(0);
 	     {
 	     q.style.display='none';
           quiz.style.display='none';
+
+
+		  qCount.style.display='none';
+		  
 		  
           result.style.display='block';
 		  again.style.display='block';
@@ -103,8 +107,9 @@ quit =() =>
 	      quiz.style.display='none';
           result.style.display='';
 		  again.style.display='block';
+		  qCount.style.display='none';
           let avg =score/tques;
           result.textContent="SCORE ="+avg*100;
           q.style.display="none";
-		 
+		  
 }

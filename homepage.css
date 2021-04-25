@@ -3,12 +3,29 @@
 
     display: grid;
     height: 100%;
-    background-image: url("./0_Quiz.jpg");
+    background-image: url("./q6.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
     background-position: center;
-}
+    font-size: 80px;
+    color: black;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+     animation: glow 1s ease-in-out infinite alternate;
+  
+    }
+    
+    @-webkit-keyframes glow {
+      from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #630505, 0 0 40px #630505, 0 0 50px #630505, 0 0 60px #630505, 0 0 70px #630505;
+      }
+      to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #630505, 0 0 50px #630505, 0 0 60px #630505, 0 0 70px #630505, 0 0 80px #630505;
+      }
+    }
+
 
 
 
@@ -17,27 +34,10 @@
  height:100% ;
  align-items: center;
  align-content: center;
- color: white;
  font-size: xx-large;
  font-family: cursive;
   }
  
- 
-  #startbtn {
-      border-radius: 100%;
-      padding: 20px;
-      text-align: center;
-      display: inline;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-      border-style: double;
-      background-color: rgb(228, 111, 111);
-    }
-    #startbtn:hover{
-      background-color: rgb(228, 111, 111);}
-
-      
     @media all and (max-width: 800px) {
       .header {
       
@@ -48,5 +48,21 @@
         height: 150px; }
   
     }
+    #stbtn {
+      height: 70px;
+      width: 250px;
+      text-align: center;
+      padding: 20px 0;
+      background: grey;
+      font-size: 23px;
+      font-weight: 700;
+      border-radius: 30px 10px;
+      border:solid black;
+      cursor: pointer;}
+
+      #stbtn:hover{
+      background-color: rgb(88, 85, 85)}
+
+   
        
  
