@@ -4,7 +4,7 @@ const questions = [
  ["How many hours can be found in a day ?","30 hours", "38 hours","48 hours", "24 hours",
  4],
  [ "How many permanent teeth does a dog have ?","38","42","40","36",4],
- ["How many sides does an hexagon have ?","Six","Sevene","Four","Five",1],
+ ["How many sides does an hexagon have ?","Six","Seven","Four","Five",1],
 ["How many hearts does an Octopus have ?","One","Two","Three","Four",3]
 ]
 
@@ -62,11 +62,13 @@ showQuesion(0);
 {
 	let selected_ans= document.querySelector('input[type=radio]:checked');
 	
+	if(!selected_ans)
+		{alert("SELECT AN OPTION");return;}
+
 	count++;
 	qCount.textContent = count;
 
-	if(!selected_ans)
-		{alert("SELECT AN OPTION");return;}
+	
 
 	
 		if(questions[quesindex].indexOf(selected_ans.value) === questions[quesindex][5])
